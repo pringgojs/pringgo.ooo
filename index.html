@@ -136,6 +136,10 @@
             left: 0;
             background: #6C7A89;
         }
+
+        .btn {
+            font-size: 50px
+        }
     </style>
 </head>
 <body>
@@ -170,10 +174,10 @@
         <div id='welcome' v-if='!started'>
             <div class='titleBlock'>
                 <h1>TIC <span>TAC</span> TOE</h1>
-                <button  @click='init("player")' @mouseover='tick.play()' style="padding: 20px; color: #00B16A; font-family:'Segoe UI'; font-weight: 600; font-size: 25px">
+                <button  @click='init("player")' @mouseover='tick.play()' class="btn btn-primary">
                     LAWAN PEMAIN
                 </button>
-                <button  @click='showModal = true' @mouseover='tick.play()' style="padding: 20px; color: #00B16A; font-family:'Segoe UI'; font-weight: 600; font-size: 25px">
+                <button  @click='showModal = true' @mouseover='tick.play()' class="btn btn-success">
                     LAWAN KOMPUTER
                 </button>
                 <br>
@@ -203,10 +207,10 @@
                 <h1 v-if='game.draw'><span>SERI</span></h1>
                 <h2>MAIN LAGI?</h2>
 
-                <button @click='init("player")' @mouseover='tick.play()' style="padding: 20px; color: #00B16A; font-family:'Segoe UI'; font-weight: 600; font-size: 50px">
+                <button @click='init("player")' @mouseover='tick.play()' class="btn">
                     LAWAN PEMAIN
                 </button>
-                <button @click='showModal = true' @mouseover='tick.play()' style="padding: 20px; color: #00B16A; font-family:'Segoe UI'; font-weight: 600; font-size: 50px">
+                <button @click='showModal = true' @mouseover='tick.play()' class="btn">
                     LAWAN KOMPUTER
                 </button>
             </div>
